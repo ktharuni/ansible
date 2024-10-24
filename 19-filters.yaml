@@ -4,4 +4,4 @@
   tasks:
   - name: print the default varaiable value
     ansible.builtin.debug:
-      msg: "Hello, {{ NAME }}"
+      msg: "Hello, {{ NAME | default('ram') }}"
