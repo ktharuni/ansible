@@ -5,3 +5,15 @@
   - name: print the default varaiable value
     ansible.builtin.debug:
       msg: "Hello, {{ NAME | default('ram') }}"
+
+  - name: convert to upper
+    vars:
+      greeting: "Hello rAm"
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper }}"
+
+  - name: convert to lower
+    vars:
+      greeting: "Hello rAm"
+    ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"
