@@ -38,7 +38,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item.item }}.{{ zone }}" #mysql.daws81s.online
+      record: "{{ item.item }}.{{ zone }}" #mysql.daws81z.fun
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
@@ -50,7 +50,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ zone }}" #daws81s.online
+      record: "{{ zone }}" #daws81z.fun
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
